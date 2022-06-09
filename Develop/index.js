@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Calls the packages needed for this application. 
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// Array of questions including validation if there is no response given. 
 const questions = [
     {
         type: 'input',
@@ -61,7 +61,7 @@ const questions = [
         type: 'list',
         message: 'Which license will your project use?',
         name: 'license', 
-        choices: ['GNU', 'Apache 2.0', 'MIT', 'No License'],
+        choices: ['MIT','APACHE 2.0','GPL 3.0','None'],
     },
     {
         type: 'input',
@@ -89,9 +89,35 @@ const questions = [
             }
         }
     },
+    {
+        type: 'input',
+        message: 'What is your contact email?',
+        name: 'email', 
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please enter your contact email.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        message: 'What is your Github username?',
+        name: 'github', 
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log('Please enter your Github username.');
+                return false;
+            }
+        }
+    },
 ];
 
-// TODO: Create a function to write README file
+// This function wrties the contents to the newly generated markdown. 
 function writeToFile(data) {
     fs.writeFile(`./dist/generated_README.md`, data, err => {
         if (err) {
@@ -101,7 +127,7 @@ function writeToFile(data) {
     });
 };
 
-// TODO: Create a function to initialize app
+// This function takes the answers from the questions and passes it to the writeToFile function. 
 function init() {
     inquirer.prompt(questions)
         .then(function(answer){
