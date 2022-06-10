@@ -21,4 +21,4 @@ Video demo:
 
 Below is a screenshot of the website. 
 
-![alt text](assets/images/screenshot.png)
+![alt text](images/screenshot.png)
