@@ -13,15 +13,15 @@
 
 ## [Description](#table-of-contents)
 
-This generator will help create quick and professional README's. .
+This is a generator that creates quick and professional README's.
 
 ## [Installation](#table-of-contents)
 
-Install necessary dependencies using npm i.
+In the terminal, use the npm i command.
 
 ## [Usage](#table-of-contents)
 
-In the terminal, use node index.js.
+In the terminal, use the node index.js command.
 
 ## [Contribution](#table-of-contents)
 
@@ -29,7 +29,7 @@ Submit a pull request.
 
 ## [Testing](#table-of-contents)
 
-In the terminal, use npm test.
+In the terminal, use the npm test command.
 
 ## [Questions](#table-of-contents)
 
