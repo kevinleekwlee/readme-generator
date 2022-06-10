@@ -5,7 +5,13 @@ This repository contains an application that utilizes inquirer and fs to generat
 
 ## Usage
 
-Install the required tools through the terminal and initialize the application using the following: 
+Through the terminal, install the required tools using the following: 
+
+```
+npm i
+```
+
+Through the terminal, initialize the application using the following:
 
 ```
 node index.js
